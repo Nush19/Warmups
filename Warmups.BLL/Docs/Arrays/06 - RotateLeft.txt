@@ -5,5 +5,11 @@ RotateLeft({5, 11, 9}) -> {11, 9, 5}
 RotateLeft({7, 0, 0}) -> {0, 0, 7}
 
 public int[] RotateLeft(int[] numbers) {
-
+    int num = numbers[0]; //first element in num
+    //for loop that shift element by 1 in left
+    for(int i = 0; i < numbers.Length - 1; i++);
+        numbers[i] = numbers[i + 1];
+    //first number is shifted to last
+    numbers[numbers.Length - 1] = num;
+    return numbers;    
 }

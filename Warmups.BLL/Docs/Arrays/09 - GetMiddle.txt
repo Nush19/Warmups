@@ -4,6 +4,29 @@ GetMiddle({1, 2, 3}, {4, 5, 6}) -> {2, 5}
 GetMiddle({7, 7, 7}, {3, 8, 0}) -> {7, 8}
 GetMiddle({5, 2, 9}, {1, 4, 5}) -> {2, 4}
 
-public int[] GetMiddle(int[] a, int[] b) {
+class GetMiddle
+{  
+    static void Main(string[] args)
+{
+    //Test getmiddle method
+    arr = GetMiddle(new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 });
+    for (int i = 0; i < arr.Length; i++)
+{
+Console.Write(arr[i] + " ");
+}
+}
 
+public static int[] GetMiddle(int[] a, int[] b) {
+    //Get first element
+    int first = number[0];
+    //Get last element
+    int last = numbers[numbers.Length - 1];
+    //Return
+    return numbers;
+}
+//Get middle value of 2 arrays
+public static int[] GetMiddle(int[] a, int[] b)
+{
+    return new int[] {a[1],b[1]};
+}
 }

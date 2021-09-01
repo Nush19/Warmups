@@ -4,6 +4,31 @@ HigherWins({1, 2, 3}) -> {3, 3, 3}
 HigherWins({11, 5, 9}) -> {11, 11, 11}
 HigherWins({2, 11, 3}) -> {3, 3, 3}
 
-public int[] HigherWins(int[] numbers) {
+class HigherWins
+{
+static void Main(string[] args)
+{
+//Test Higher wins method
+int[] arr = { 1, 2, 3 };
+arr = HigherWins(arr);
+Console.Write("HigherWins wins test: ");
+for (int i = 0; i < arr.Length; i++)
+{
+Console.Write(arr[i] + " ");
+}
 
+public static int[] HigherWins(int[] numbers) {
+    //Get first element
+    int first = numbers[0];
+    //Get last element
+    int last = numbers[numbers.Length - 1];
+    //Find highest
+    int highest = first > last ? first : last;
+    //Replace with highest
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = highest;
+    }
+    //Return
+    return numbers;
 }
