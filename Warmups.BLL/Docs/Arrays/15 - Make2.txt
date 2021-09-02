@@ -4,6 +4,46 @@ Make2({4, 5}, {1, 2, 3}) -> {4, 5}
 Make2({4}, {1, 2, 3}) -> {4, 1}
 Make2({}, {1, 2}) -> {1, 2}
 
-public int[] make2(int[] a, int[] b) {
-  
+class Make2 {
+    public int[] make2(int[] a,int[] b)
+    {
+        int[] make = new int[2];//declaring array make[] to store the resultant values
+        //checking all possible conditions and storing values of make[] array...
+        if(a.Length == 1 && b.Length !=0)
+        {
+            make[0] = a[0];
+            make[1] = b[0];
+        }
+        else if(a.Length == 0 && b.Length !=0)
+        {
+            if(b.Length == 1)
+            {
+                make[0] = b[0];
+            }
+            else
+            {
+                make[0] = b[0];
+                make[1] = b[1];
+            }
+        }
+        else
+        {
+            make[0] = a[0];
+            make[1] = a[1];
+        }
+        return make;
+    }
+  public static void Main() {
+      //declaring a and b arrays and initializing it..
+      int[] a = new int[] {4};
+      int[] b = new int[] {1,2,3};
+      int[] c = new int[2];
+      Temp1 h = new Temp1();
+      c = h.make2(a,b);//calling make2()..
+      int i;
+      for(i=0;i<c.Length;i++)
+      {
+          Console.Write(c[i]+" ");//displaying the resultant array...
+      }
+  }
 }
