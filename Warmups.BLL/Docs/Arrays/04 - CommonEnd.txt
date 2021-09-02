@@ -4,7 +4,13 @@ CommonEnd({1, 2, 3}, {7, 3}) -> true
 CommonEnd({1, 2, 3}, {7, 3, 2}) -> false
 CommonEnd({1, 2, 3}, {1, 3}) -> true
 
-public boolean commonEnd(int[] a, int[] b) {
+using System;
+
+namespace Warmups.BLL
+{
+public class CommonEnd{
+
+public boolean CommonEnd(int[] a, int[] b) {
     // check for first element
     if(a[0] == b[0])
       return true;
@@ -28,5 +34,6 @@ static void Main()
     Console.WriteLine(program.commonEnd(c,d));
 }
 
+}
 }
 

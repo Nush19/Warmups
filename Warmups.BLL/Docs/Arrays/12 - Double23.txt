@@ -4,6 +4,11 @@ Double23({2, 2, 3}) -> true
 Double23({3, 4, 5, 3}) -> true
 Double23({2, 3, 2, 2}) -> fals
 
+using System;
+
+namespace Warmups.BLL
+{
+
 public static boolean Double23(int[] numbers) {
         int countTwo = 0, countThree = 0;
         for(int i=0;i<numbers.Length; i++){
@@ -22,4 +27,4 @@ public static boolean Double23(int[] numbers) {
         Console.WriteLine(Double23(arr2));
         Console.WriteLine(Double23(arr3));
   }
-}  
+}

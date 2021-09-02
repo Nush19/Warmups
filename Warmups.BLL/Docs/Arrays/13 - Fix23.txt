@@ -4,7 +4,11 @@ Fix23({1, 2, 3}) ->{1, 2, 0}
 Fix23({2, 3, 5}) -> {2, 0, 5}
 Fix23({1, 2, 1}) -> {1, 2, 1}
 
-public int[] Fix23(int[] numbers) {
+using System;
+
+namespace Warmups.BLL
+{
+class Fix23{
     public static int[] Fix23(int[] numbers) {
         for(int i=1;i<numbers.Length;i++){
             if(numbers[i] == 3 && numbers[i-1] == 2){
@@ -34,4 +38,5 @@ public int[] Fix23(int[] numbers) {
     }
 
 
+}
 }

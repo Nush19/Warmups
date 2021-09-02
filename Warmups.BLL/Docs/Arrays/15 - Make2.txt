@@ -4,6 +4,10 @@ Make2({4, 5}, {1, 2, 3}) -> {4, 5}
 Make2({4}, {1, 2, 3}) -> {4, 1}
 Make2({}, {1, 2}) -> {1, 2}
 
+using System;
+
+namespace Warmups.BLL
+{
 class Make2 {
     public int[] make2(int[] a,int[] b)
     {
@@ -46,4 +50,5 @@ class Make2 {
           Console.Write(c[i]+" ");//displaying the resultant array...
       }
   }
+}
 }

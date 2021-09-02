@@ -4,6 +4,10 @@ HigherWins({1, 2, 3}) -> {3, 3, 3}
 HigherWins({11, 5, 9}) -> {11, 11, 11}
 HigherWins({2, 11, 3}) -> {3, 3, 3}
 
+using System;
+
+namespace Warmups.BLL
+{
 class HigherWins
 {
 static void Main(string[] args)
@@ -32,3 +36,7 @@ public static int[] HigherWins(int[] numbers) {
     //Return
     return numbers;
 }
+}
+}
+}
+

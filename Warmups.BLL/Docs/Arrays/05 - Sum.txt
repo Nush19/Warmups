@@ -4,7 +4,13 @@ Sum({1, 2, 3}) -> 6
 Sum({5, 11, 2}) -> 18
 Sum({7, 0, 0}) -> 7
 
-public int Sum(int[] numbers) {
+using System;
+
+namespace Warmups.BLL
+{
+    public class Sum{
+
+    public int Sum(int[] numbers) {
     //variable to sum all elements
     int sum = 0;
     //loop through the array and add each element
@@ -26,4 +32,6 @@ static void Main()
 }
 
 }
+}
+
 

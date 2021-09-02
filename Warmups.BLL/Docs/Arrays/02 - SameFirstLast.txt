@@ -4,6 +4,10 @@ SameFirstLast({1, 2, 3}) -> false
 SameFirstLast({1, 2, 3, 1}) -> true
 SameFirstLast({1, 2, 1}) -> true
 
+using System;
+
+namespace Warmups.BLL
+{
 public class SameFirstLast {
     static boolean sameFirstLast(int[] numbers) {  
     // first check array length >= 1
@@ -20,4 +24,5 @@ public class SameFirstLast {
         else
         Console.WriteLine("false");
     }
+}
 }

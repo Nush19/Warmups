@@ -4,6 +4,10 @@ KeepLast({4, 5, 6}) -> {0, 0, 0, 0, 0, 6}
 KeepLast({1, 2}) -> {0, 0, 0, 2}
 KeepLast({3}) -> {0, 3}
 
+using System;
+
+namespace Warmups.BLL
+{
 public int[] KeepLast(int[] numbers) {
     int length = numbers.Length;
        int[] newArr = new int[2*length];
@@ -21,3 +25,5 @@ Console.WriteLine(KeepLast(numbers) );
        foreach(int i in arr)
            Console.Write(i+" ");
 }
+}
+

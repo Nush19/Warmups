@@ -4,7 +4,10 @@ RotateLeft({1, 2, 3}) -> {2, 3, 1}
 RotateLeft({5, 11, 9}) -> {11, 9, 5}
 RotateLeft({7, 0, 0}) -> {0, 0, 7}
 
+using System;
 
+namespace Warmups.BLL
+{
 class RotateLeft{
     static void Main()
     {
@@ -17,8 +20,8 @@ class RotateLeft{
             Write(numbers[i]+" ");
     }
 }
+{
 
-public class RotateLeft{
     public int[] RotateLeft(int[] numbers) {
     int num = numbers[0]; //first element in num
     //for loop that shift element by 1 in left
@@ -28,6 +31,7 @@ public class RotateLeft{
     numbers[numbers.Length - 1] = num;
     return numbers;    
   } 
+}
 }
 
 

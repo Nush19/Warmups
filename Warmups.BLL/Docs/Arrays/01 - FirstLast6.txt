@@ -4,6 +4,10 @@ FirstLast6({1, 2, 6}) -> true
 FirstLast6({6, 1, 2, 3}) -> true
 FirstLast6({13, 6, 1, 2, 3}) -> false
 
+using System;
+
+namespace Warmups.BLL
+{
 public class FirstLast6 {
     static boolean FirstLast6(int [] numbers) {
         // array length will be >= 1
@@ -20,4 +24,5 @@ public class FirstLast6 {
         else
         Console.WriteLine("false");
     }
+}
 }
