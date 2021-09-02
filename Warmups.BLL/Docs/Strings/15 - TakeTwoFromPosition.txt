@@ -4,6 +4,16 @@ TakeTwoFromPosition("java", 0) -> "ja"
 TakeTwoFromPosition("java", 2) -> "va"
 TakeTwoFromPosition("java", 3) -> "ja"
 
+class TakeTwoFromPosition {
 public string TakeTwoFromPosition(string str, int n) {
-
+      if(str.Length < n + 2 || n < 0)
+        return str.Substring(0,2);
+        return str.Substring(n,2);
 }
+
+static void Main() {
+    Console.WriteLine(sol.TakeTwoFromPosition("java", 0));
+    Console.WriteLine(sol.TakeTwoFromPosition("java", 2));
+    Console.WriteLine(sol.TakeTwoFromPosition("java", 3));
+   }
+}  

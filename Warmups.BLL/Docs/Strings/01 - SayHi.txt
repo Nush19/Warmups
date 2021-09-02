@@ -4,6 +4,15 @@ SayHi("Bob") -> "Hello Bob!"
 SayHi("Alice") -> "Hello Alice!"
 SayHi("X") -> "Hello X!"
 
-public string SayHi(string name) {
-
+class SayHi {
+    //method SayHi
+    public static string SayHi(string name){
+        //concatentate name variable with the string "Hello"
+        //then add "!"
+        return "Hello " + name + "!";
+    }
+  static void Main(){
+      //csll method SayHi()
+    Console.WriteLine(SayHi("X"));
+  }
 }

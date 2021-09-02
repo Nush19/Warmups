@@ -4,6 +4,14 @@ Abba("Hi", "Bye") -> "HiByeByeHi"
 Abba("Yo", "Alice") -> "YoAliceAliceYo"
 Abba("What", "Up") -> "WhatUpUpWhat"
 
-public string Abba(string a, string b) {
-
+class Abba {
+    //method to concate strings a and b in the from abba
+    static string Abba(string a, string b){
+        //concat strings in the required order
+        return a + b + b + a;
+    }
+  static void Main() {
+      //call method Abba()
+    Console.WriteLine(Abba("Yo","Alice"));
+  }
 }

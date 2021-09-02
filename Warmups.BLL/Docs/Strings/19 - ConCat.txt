@@ -4,6 +4,14 @@ ConCat("abc", "cat") -> "abcat"
 ConCat("dog", "cat") -> "dogcat"
 ConCat("abc", "") -> "abc"
 
-public string ConCat(string a, string b) {
-
+class ConCat {
+    public static string ConCat(string a,string b) {
+        if(b.Length > 0 && a[a.Length - 1] == b[0]) return (a + b.Substring(1));
+        else return (a + b);
+    }
+    static void Main() {
+        Console.WriteLine(ConCat("abc", "cat"));
+        Console.WriteLine(ConCat("dog", "cat"));
+        Console.WriteLine(ConCat("abc", ""));
+    }
 }

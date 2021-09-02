@@ -4,6 +4,24 @@ StripX("xHix") -> "Hi"
 StripX("xHi") -> "Hi"
 StripX("Hxix") -> "Hxi"
 
-public string StripX(string str) {
-
+class StripX {
+  public static string StripX(string str) {
+    //convert into stringArray 
+     char[] c = str.ToCharArray();  
+     int n=str.Length;
+  //check for first element 
+     if(c[0]=='x'||c[0]=='X')
+       c[0]=' ';
+  //check for last element      
+     if(c[n-1]=='x'||c[n-1]=='X')
+       c[n-1]=' ';
+       
+    //convert into string
+   string charsStr = new string(c); 
+    return charsStr.Trim(); 
+  }    
+  static void Main() {
+   
+    Console.WriteLine(StripX("Xhix")); 
+  }
 }

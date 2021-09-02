@@ -4,6 +4,15 @@ FrontAndBack("Hello", 2) -> "Helo"
 FrontAndBack("Chocolate", 3) -> "Choate"
 FrontAndBack("Chocolate", 1) -> "Ce"
 
+class FrontAndBack {
 public string FrontAndBack(string str, int n) {
-
+    return str.Substring(0,n) + str.Substring(str.Length-n);
 }
+ static void Main() {
+    
+    Console.WriteLine(sol.FrontAndBack("Hello", 2));
+    Console.WriteLine(sol.FrontAndBack("Chocolate", 3));        
+    Console.WriteLine(sol.FrontAndBack("Chocolate", 1));
+    }
+}
+

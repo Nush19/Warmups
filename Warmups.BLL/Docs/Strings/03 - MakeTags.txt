@@ -4,6 +4,14 @@ MakeTags("i", "Yay") -> "<i>Yay</i>"
 MakeTags("i", "Hello") -> "<i>Hello</i>"
 MakeTags("cite", "Yay") -> "<cite>Yay</cite>"
 
-public string MakeTags(string tag, string content) {
-
+class MakeTags {
+    //method to add html tags
+    public static string MakeTags(string tag, string content){
+        //concatenate angular brackets as needed
+        return "<" + tag + ">" + content + "</" + tag + ">";
+    }
+  static void Main() {
+      //call method MakeTags
+    Console.WriteLine(MakeTags("i","Yay"));
+  }
 }

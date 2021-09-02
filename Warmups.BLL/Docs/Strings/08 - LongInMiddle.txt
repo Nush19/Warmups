@@ -4,6 +4,18 @@ LongInMiddle("Hello", "hi") -> "hiHellohi"
 LongInMiddle("hi", "Hello") -> "hiHellohi"
 LongInMiddle("aaa", "b") -> "baaab"
 
-public string LongInMiddle(string a, string b) {
-
+class LongInMiddle  {
+    public string LongInMiddle(string a,string b)
+    {
+        if(a.Length>b.Length)
+        return b+a+b;
+        else
+        return a+b+a;
+    }
+  static void Main(string [] args) {
+      LongInMiddle l=new LongInMiddle();
+      Console.WriteLine(l.LongInMiddle("Hello","hi"));
+      Console.WriteLine(l.LongInMiddle("hi","Hello"));
+      Console.WriteLine(l.LongInMiddle("aaa","b"));
+  }
 }

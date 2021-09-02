@@ -4,6 +4,34 @@ Rotateleft2("Hello") -> "lloHe"
 Rotateleft2("java") -> "vaja"
 Rotateleft2("Hi") -> "Hi"
 
-public string Rotateleft2(string str) {
+class RotateLeft2
+  {
+    //RotateLeft2 Module
+    public static void RotateLeft2(string s) 
+    {
+      //if string length is greater than 2
+      if(s.Length>2){
+          //create a new substring str
+          //such that the characters staring from index 3 
+          //to end from string s are concatenated 
+          //then index 0 and 1
+          string str=s.Substring(2)+s[0]+s[1];
+          Console.WriteLine(str);
+      }
+      else
+      {
+          //if string length is <=2 
+          Console.WriteLine(s);
+      }
+    }
 
-}
+ static void Main(string[] args)
+    {
+        Console.WriteLine("Input String : ");
+        string s=Console.ReadLine();
+        Console.WriteLine("RotateLeft2 : ");
+        //call to the RotateLeft2 function
+        RotateLeft2(s);
+    }  
+  }
+      

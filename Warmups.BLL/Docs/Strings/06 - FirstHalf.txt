@@ -4,6 +4,18 @@ FirstHalf("WooHoo") -> "Woo"
 FirstHalf("HelloThere") -> "Hello"
 FirstHalf("abcdef") -> "abc"
 
-public string FirstHalf(string str) {
+class FirstHalf
+{
+   static void Main(string[] args)
+{
+   Console.WriteLine(FirstHalf("WooHoo"));
+   Console.WriteLine(FirstHalf("HelloThere"));
+   Console.WriteLine(FirstHalf("abcdef"));
+   Console.ReadLine();
+}
 
+public static String FirstHalf(string str)
+{
+    return str.Substring(0, str.Length/2);
+}
 }

@@ -4,6 +4,24 @@ LastChars("last", "chars") -> "ls"
 LastChars("yo", "mama") -> "ya"
 LastChars("hi", "") -> "h@"
 
-public string LastChars(string str) {
-
+class LastChars {
+    public static string LastChars(string a,string b) {
+        char first, last;
+        if(a.Length == 0) first = '@';
+        else first = a[0];
+        
+        if(b.Length == 0) last = '@';
+        else last = b[b.Length-1];
+        
+        string s = "";
+        s += first;
+        s += last;
+        
+        return s;
+    }
+    static void Main() {
+        Console.WriteLine(LastChars("last", "chars"));
+        Console.WriteLine(LastChars("yo", "mama"));
+        Console.WriteLine(LastChars("hi", ""));
+    }
 }

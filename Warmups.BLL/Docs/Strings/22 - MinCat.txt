@@ -4,6 +4,47 @@ MinCat("Hello", "Hi") -> "loHi"
 MinCat("Hello", "java") -> "ellojava"
 MinCat("java", "Hello") -> "javaello"
 
-public string MinCat(string a, string b) {
+class MinCat {
+  public static string MinCat(string str1, string str2) {
+    //store the length of strings
+    int l1 = str1.Length;
+    int l2 = str2.Length;
+    int len;
 
+    //choose the shorter value among the two lengths
+    if (l1<l2) {
+      len=l1;
+    }
+    else {
+      len=l2;
+    }
+
+
+    //convert strings to character arrays
+    char[] array1 = str1.ToCharArray();
+    char[] array2 = str2.ToCharArray();
+    //create a temporary  result array
+    char[] resarr = new char[2*len];
+
+    //loop through from 0 to len
+    for (int i = 0; i < len; i = i + 1) {
+      //in resarray, store last 'len' characters of array1
+      resarr[i] = array1[l1-len+i];
+      //in resarray, store last 'len' characters of array2
+      resarr[len+i] = array2[l2-len+i];
+    }
+
+
+    //create final result string from array
+    string res = new string(resarr);
+
+    //return the result
+    return res;
+  }
+
+  static void Main() {
+    Console.WriteLine(MinCat("Hello", "Hi"));
+    Console.WriteLine(MinCat("Hello", "java"));
+    Console.WriteLine(MinCat("java", "Hello"));
+  }
 }

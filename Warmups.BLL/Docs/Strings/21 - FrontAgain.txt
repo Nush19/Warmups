@@ -4,6 +4,24 @@ FrontAgain("edited") -> true
 FrontAgain("edit") -> false
 FrontAgain("ed") -> true
 
-public boolean FrontAgain(string str) {
+class FrontAgain {
+  public static boolean FrontAgain(string str) {
+    //store the length of string
+    int l = str.Length;
 
+    //convert string to character array
+    char[] array = str.ToCharArray();
+    //check if last two chars are same as first two
+    if (array[l-2]==str[0] && array[l-1]==str[1])
+    {
+      return true;
+    }
+    return false;
+  }
+
+  static void Main() {
+    Console.WriteLine(FrontAgain("edited"));
+    Console.WriteLine(FrontAgain("edit"));
+    Console.WriteLine(FrontAgain("ed"));
+  }
 }

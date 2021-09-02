@@ -4,6 +4,19 @@ MultipleEndings("Hello") -> "lololo"
 MultipleEndings("ab") -> "ababab"
 MultipleEndings("Hi") -> "HiHiHi"
 
-public string MultipleEndings(string str) {
+class MultipleEndings
+{
+   static void Main(string[] args)
+{
+   Console.WriteLine(MultipleEndings("Hello"));
+   Console.WriteLine(MultipleEndings("ab"));
+   Console.WriteLine(MultipleEndings("Hi"));
+   Console.ReadLine();
+}
 
+public static String MultipleEndings(string str)
+{
+    int len = str.Length;
+    return str.Substring(len - 2) + str.Substring(len - 2) + str.Substring(len - 2);
+}
 }

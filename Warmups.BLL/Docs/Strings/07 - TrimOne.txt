@@ -4,6 +4,19 @@ TrimOne("Hello") -> "ell"
 TrimOne("java") -> "av"
 TrimOne("coding") -> "odin"
 
-public string TrimOne(string str) {
-
+class TrimOne  {
+    public string TrimOne(string str)
+    {
+        string s1="";
+        for(int i=1;i<str.Length-1;i++)
+        s1=s1+str[i];
+        
+        return s1;
+    }
+  static void Main(string [] args) {
+      TrimOne t=new TrimOne();
+      Console.WriteLine(t.TrimOne("Hello"));
+      Console.WriteLine(t.TrimOne("java"));
+      Console.WriteLine(t.TrimOne("coding"));
+  }
 }

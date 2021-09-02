@@ -4,6 +4,26 @@ SwapLast("coding") -> "codign"
 SwapLast("cat") -> "cta"
 SwapLast("ab") -> "ba"
 
-public string SwapLast(string str) {
+class SwapLast {
+  public static string SwapLast(string str) {
+    //store the length of string
+    int l = str.Length;
 
+    //convert string to character array
+    char[] array = str.ToCharArray();
+    //swap the last two characters in the array
+    array[l-2]=str[l-1];
+    array[l-1]=str[l-2];
+    //save the result in a new string
+    string res = new string(array);
+
+    //return the results
+    return res;
+  }
+
+  static void Main() {
+    Console.WriteLine(SwapLast("coding"));
+    Console.WriteLine(SwapLast("cat"));
+    Console.WriteLine(SwapLast("ab"));
+  }
 }
