@@ -4,7 +4,7 @@ Max(1, 2, 3) -> 3
 Max(1, 3, 2) -> 3
 Max(3, 2, 1) -> 3
 
-public class main
+public class Max
 {
     //definition of the Max() function..
 public static int Max(int a, int b, int c) {

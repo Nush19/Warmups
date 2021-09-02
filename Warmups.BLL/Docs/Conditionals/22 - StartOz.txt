@@ -4,7 +4,7 @@ StartOz("ozymandias") -> "oz"
 StartOz("bzoo") -> "z"
 StartOz("oxx") -> "o"
 
-public class main
+public class StartOz
 {
     //definition of the StartOz() method...
 public static string StartOz(string str) {
