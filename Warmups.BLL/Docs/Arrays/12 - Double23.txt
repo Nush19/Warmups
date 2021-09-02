@@ -1,4 +1,8 @@
-class Double23{
+Given an int array, return true if the array contains 2 twice, or 3 twice. 
+
+Double23({2, 2, 3}) -> true
+Double23({3, 4, 5, 3}) -> true
+Double23({2, 3, 2, 2}) -> fals
 
 public static boolean Double23(int[] numbers) {
         int countTwo = 0, countThree = 0;
