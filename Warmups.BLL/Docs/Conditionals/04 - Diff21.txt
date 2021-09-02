@@ -4,6 +4,29 @@ Diff21(23) -> 4
 Diff21(10) -> 11
 Diff21(21) -> 0
 
-public int Diff21(int n) {
-  
+class Diff21 {
+    public int Diff21(int n)
+    {
+        int  diff;
+        //if n>21 then we need to double the value of difference..
+        if(n>21)
+        {
+            diff = n-21;
+            return Math.Abs(temp*2);
+        }
+        //else return the difference of absolute value...
+        else
+        {
+            diff = 21-n;
+            return Math.Abs(temp);
+        }
+    }
+  public static void Main() {
+      
+      Diff21 d = new Diff21();
+      //calling Diff21()..
+      Console.WriteLine(d.Diff21(23));
+      Console.WriteLine(d.Diff21(10));
+      Console.WriteLine(d.Diff21(21));
+  }
 }

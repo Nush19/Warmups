@@ -38,8 +38,8 @@ class Make2 {
       int[] a = new int[] {4};
       int[] b = new int[] {1,2,3};
       int[] c = new int[2];
-      Temp1 h = new Temp1();
-      c = h.make2(a,b);//calling make2()..
+      Make2 m = new Make2();
+      c = m.make2(a,b);//calling make2()..
       int i;
       for(i=0;i<c.Length;i++)
       {

@@ -4,6 +4,23 @@ ParrotTrouble(true, 6) -> true
 ParrotTrouble(true, 7) -> false
 ParrotTrouble(false, 6) -> false
 
-public boolean ParrotTrouble(boolean isTalking, int hour) {
-  
+class ParrotTrouble {
+    public boolean ParrotTrouble(bool isTalking,int hour)
+    {
+        //if istalking is true and hour is before 7 or after 20 we retuen true
+        if((isTalking == true) && ((hour<7)||(hour>20)))
+        {
+            return true;
+        }
+        else
+            return false;//else false...
+    }
+  public static void Main() {
+      
+      ParrotTrouble p = new ParrotTrouble();
+      //calling ParrotTrouble()..
+      Console.WriteLine(p.ParrotTrouble(true,6));
+      Console.WriteLine(p.ParrotTrouble(true,7));
+      Console.WriteLine(p.ParrotTrouble(false,8));
+  }
 }
