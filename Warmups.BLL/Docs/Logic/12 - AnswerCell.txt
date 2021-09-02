@@ -4,6 +4,24 @@ AnswerCell(false, false, false) → true
 AnswerCell(false, false, true) → false
 AnswerCell(true, false, false) → false
 
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("\nAnswerCell()");
+    Console.WriteLine(AnswerCell(false, false, false));
+    Console.WriteLine(AnswerCell(false, false, true));
+    Console.WriteLine(AnswerCell(true, false, false));
+  }
+
 public boolean AnswerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-  
+    if(isAsleep)
+      return false;
+    else if(isMom && isMorning)
+      return true;
+    else if (!isMom && isMorning)
+      return false;
+    else if(!isMorning)
+      return true;
+    return true;
+}
 }

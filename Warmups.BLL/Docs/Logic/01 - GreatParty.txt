@@ -3,7 +3,40 @@ When squirrels get together for a party, they like to have cigars. A squirrel pa
 GreatParty(30, false) → false
 GreatParty(50, false) → true
 GreatParty(70, true) → true
+ 
+class GreatParty 
+{
+    //Main() method
+    static void Main(string[] args)
+{
+//method call
+    Console.WriteLine(" GreatParty(30, false) : " + GreatParty(30, false));
+    Console.WriteLine(" GreatParty(50, false): " + GreatParty(50, false));
+    Console.WriteLine(" GreatParty(70, true) : " + GreatParty(70, true));
+//to hold the screen
+    Console.ReadKey();
+}
 
-public boolean GreatParty(int cigars, boolean isWeekend) {
-  
+//This method return whether the party is successful or not
+    public static boolean GreatParty(int cigars, bool isWeekend)
+{
+//checking cigars
+    if(cigars>=40 && cigars<=60 && isWeekend==false)
+{
+// when the number of cigars is between 40 and 60, inclusive and it is not the weekend
+//party is successful return true
+    return true;
+}
+    else if (cigars >= 40 && isWeekend == true)
+{
+// when the number of cigars is greater than 40 and it is the weekend
+//party is successful return true
+   return true;
+}
+   else
+{
+//for any other value
+   return false;
+}
+}
 }

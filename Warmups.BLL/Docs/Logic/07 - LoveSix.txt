@@ -4,6 +4,36 @@ LoveSix(6, 4) → true
 LoveSix(4, 5) → false
 LoveSix(1, 5) → true
 
-public boolean LoveSix(int a, int b) {
-  
+class LoveSix
+{
+// Function return true if either one is 6. Or if their sum or difference is 6
+public static boolean LoveSix(int a, int b) {
+    // Check if a or b is 6 or if their sum or difference is 6
+      if(a == 6 || b == 6 || (a+b) == 6 || (a-b) == 6)
+      
+        // Retunr true
+        return true;
+      
+      // Check if a or b is not 6 or if their sum or difference is not 6
+      else
+    
+        // Return false
+        return false;
 }
+
+// Main method
+static void Main()
+{
+      // Call method LoveSix()
+      Console.WriteLine(LoveSix(6, 4));
+    
+      // Call method LoveSix()
+      Console.WriteLine(LoveSix(4, 5));
+    
+      // Call method LoveSix()
+      Console.WriteLine(LoveSix(1, 5));
+}
+}
+
+
+      

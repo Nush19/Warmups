@@ -4,6 +4,43 @@ InRange(5, false) → true
 InRange(11, false) → false
 InRange(11, true) → true
 
-public boolean InRange(int n, boolean outsideMode) {
-  
+class InRange
+{
+
+// Function return true if n is in the range 1..10, inclusive. Unless
+// "outsideMode" is true, in which case return true if the number is less
+// or equal to 1, or greater or equal to 10
+
+public static boolean InRange(int n, boolean outsideMode) {
+    // If number is in the range 1..10, inclusive & "outsideMode" is false
+      if((n >= 1 && n <= 10) || outsideMode)
+    
+        // Return true
+        return true;
+      
+      // if the number is less or equal to 1, or greater or equal to 10
+      else
+    
+        // Return false
+        return false;
 }
+
+// Main method
+static void Main()
+{
+    // Call method InRange()
+    Console.WriteLine(InRange(5, false));
+  
+    // Call method InRange()
+    Console.WriteLine(InRange(11, false));
+  
+    // Call method InRange()
+    Console.WriteLine(InRange(11, true));
+}
+}
+  
+
+
+
+
+      

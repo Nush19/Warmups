@@ -4,6 +4,30 @@ SkipSum(3, 4) → 7
 SkipSum(9, 4) → 20
 SkipSum(10, 11) → 21
 
-public int SkipSum(int a, int b) {
+class SkipSum
+{
+//Declaring the SkipSum function
+public static int SkipSum(int a, int b) {
+    //calculating the sum of a and b
+    int sum = a+b;
   
+    //checking if sum is between 10..19 then sum is equal to 20
+    if(sum>=10 && sum <= 19)
+    {
+    //assigning sum = 20
+    sum = 20;
 }
+  
+    //returning the sum
+    return sum;
+}
+    static void Main()
+{
+    //calling the function and printing the output
+    Console.WriteLine(SkipSum(3,4));
+    Console.WriteLine(SkipSum(9,4));
+}
+}
+
+
+

@@ -4,6 +4,18 @@ Mod20(20) → false
 Mod20(21) → true
 Mod20(22) → true
 
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("Mod20()");
+    Console.WriteLine(Mod20(20));
+    Console.WriteLine(Mod20(21));
+    Console.WriteLine(Mod20(22));
+  }  
+
 public boolean Mod20(int n) {
-  
+     if(n % 20 == 1 || n % 20 == 2)
+      return true;
+    return false;
+}
 }

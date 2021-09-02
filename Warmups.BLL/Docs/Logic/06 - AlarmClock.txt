@@ -4,6 +4,59 @@ AlarmClock(1, false) → "7:00"
 AlarmClock(5, false) → "7:00"
 AlarmClock(0, false) → "10:00"
 
-public string AlarmClock(int day, boolean vacation) {
-
+class AlarmClock
+{
+//declaring the require function
+public static string AlarmClock(int day, boolean vacation) {
+    //declaring the required string
+    string time;
+  
+    //checking if vacation is true
+    if(vacation)
+    {
+    //if weekend
+    if(day == 0 || day == 6)
+    {
+    //time is off
+    time = "off";
 }
+    //if not weekend
+    else
+{
+    //time is 10
+    time = "10:00";
+}   
+}
+  
+    //if not vacation
+    else
+{
+    //if day is between monday to friday
+    if(day >= 1 && day <= 5)
+{
+    //time is 7
+    time = "7:00";
+}
+  
+    //if weekend
+    else
+{
+    //time is 10
+    time = "10:00";
+}
+}
+  
+    //returning the time
+    return time;
+}
+    static void Main()
+{
+  
+    //calling the function and printing the result
+    Console.WriteLine(AlarmClock(1,false));
+    Console.WriteLine(AlarmClock(5,false));
+    Console.WriteLine(AlarmClock(0,false));
+}
+}
+
+

@@ -4,6 +4,39 @@ SpecialEleven(22) → true
 SpecialEleven(23) → true
 SpecialEleven(24) → false
 
-public boolean SpecialEleven(int n) {
+class SpecialEleven
+{
 
+// Function return true if number is a multiple of 11 or
+// if it is one more than a multiple of 11 otherwise it return false
+public static boolean SpecialEleven(int n) {
+    // If number is a multiple of 11 or if it is one more than a multiple of 11
+      if((n%11 == 0) || (n-1)%11 == 0)
+    
+        // Return true
+        return true;
+      
+      // If number is a not multiple of 11 or if it is not one more
+      // than a multiple of 11
+      else
+    
+        // Return false
+        return false;
 }
+
+// Main method
+static void Main()
+{
+    // Call method SpecialEleven()
+    Console.WriteLine(SpecialEleven(22));
+  
+    // Call method SpecialEleven()
+    Console.WriteLine(SpecialEleven(23));
+  
+    // Call method SpecialEleven()
+    Console.WriteLine(SpecialEleven(24));
+}
+}
+
+
+     

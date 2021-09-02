@@ -4,6 +4,20 @@ Mod35(3) → true
 Mod35(10) → true
 Mod35(15) → false
 
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("\nMod35()");
+    Console.WriteLine(Mod35(3));
+    Console.WriteLine(Mod35(10));
+    Console.WriteLine(Mod35(15));
+}
+
 public boolean Mod35(int n) {
-  
+      if(n % 15 == 0)
+      return false;
+    else if(n%3 == 0 || n%5==0)
+      return true;
+    return false;
+}
 }

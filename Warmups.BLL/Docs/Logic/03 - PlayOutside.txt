@@ -4,6 +4,33 @@ PlayOutside(70, false) → true
 PlayOutside(95, false) → false
 PlayOutside(95, true) → true
 
-public boolean PlayOutside(int temp, boolean isSummer) {
-  
+class PlayOutside
+{
+//Main() method
+    static void Main(string[] args)
+{
+//function call
+    Console.WriteLine("PlayOutside(70, false) : "+ PlayOutside(70, false));
+    Console.WriteLine("PlayOutside(95, false) : "+ PlayOutside(95, false));
+    Console.WriteLine("PlayOutside(95, true) : "+ PlayOutside(95, true));
+}
+//This method return true/false based on temeperature and summer
+    public static bool PlayOutside(int temp, bool isSummer)
+{
+//checking temeparture
+    if(temp>=60 && temp<=90 && isSummer==false)
+{
+//when the temperature is between 60 and 90 (inclusive) and its not a summer
+    return true;
+}
+    else if (temp >= 60 && temp <= 100 && isSummer == true)
+{
+//when the temperature is between 60 and 100 (inclusive) and its a summer
+    return true;
+}
+    else
+{
+    return false;
+}
+}
 }

@@ -4,6 +4,66 @@ CaughtSpeeding(60, false) → 0
 CaughtSpeeding(65, false) → 1
 CaughtSpeeding(65, true) → 0
 
+class CaughtSpeeding
+{
+//Declaring the function
 public int CaughtSpeeding(int speed, boolean isBirthday) {
+    //declaring the required variables
+    int ticket;
   
+    //checking if birthday
+    if(isBirthday)
+{
+    //if speed is less than or equal to 65
+    if(speed <= 65)
+{
+    //ticket is 0
+    ticket = 0;
+}
+    //if speed is less than or equal to 85
+    else if(speed <=85)
+{
+//ticket is 1
+    ticket = 1;
+}
+//speed greater than 85
+    else
+{
+//ticket is 2
+    ticket = 2;
+}
+}
+//if not birthday
+    else
+{
+//if speed is less than or equal to 60
+    if(speed <= 60)
+{
+//ticket is 0
+    ticket = 0;
+}
+//if speed is less than or equal to 85
+    else if(speed<=80)
+{
+//ticket is 1
+    ticket = 1;
+}
+//if speed is grater than 86
+    else
+{
+//ticket is 2
+    ticket = 2;
+}
+}
+
+//returning the ticket value
+    return ticket;
+}
+static void Main()
+{
+   //Calling the functions and printing the result
+   Console.WriteLine(CaughtSpeeding(60,false));
+   Console.WriteLine(CaughtSpeeding(65,false));
+   Console.WriteLine(CaughtSpeeding(65,true));
+}
 }

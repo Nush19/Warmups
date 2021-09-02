@@ -4,6 +4,23 @@ FrontTimes("Chocolate", 2) -> "ChoCho"
 FrontTimes("Chocolate", 3) -> "ChoChoCho"
 FrontTimes("Abc", 3) -> "AbcAbcAbc"
 
-public string FrontTimes(string str, int n) {
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("\nCalling FrontTimes()");
+    Console.WriteLine(FrontTimes("Chocolate", 2));
+    Console.WriteLine(FrontTimes("Chocolate", 3));
+    Console.WriteLine(FrontTimes("AbC", 3));
 
+public string FrontTimes(string str, int n) {
+    string sub = "";
+    string result = "";
+    if(s.Length < 3)
+      sub = s.Substring(0, s.Length);
+    else
+      sub = s.Substring(0,3);
+    for(int i = 0; i < n; i++){
+      result += sub;
+    }
+    return result;
 }

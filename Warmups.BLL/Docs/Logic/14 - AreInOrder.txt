@@ -5,5 +5,15 @@ AreInOrder(1, 2, 1, false) → false
 AreInOrder(1, 1, 2, true) → true
 
 public boolean AreInOrder(int a, int b, int c, boolean bOk) {
+    if(bOk) {
+    if (c > b)
+    return true;
+    else
+    return false;
+}
+    if (b > a && c > b)
+    return true;
+    else
+    return false; 
   
 }

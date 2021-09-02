@@ -4,6 +4,19 @@ StringTimes("Hi", 2) -> "HiHi"
 StringTimes("Hi", 3) -> "HiHiHi"
 StringTimes("Hi", 1) -> "Hi"
 
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("Calling StringTimes()");
+    Console.WriteLine(StringTimes("Hi", 2));
+    Console.WriteLine(StringTimes("Hi", 3));
+    Console.WriteLine(StringTimes("Hi", 1));
+
 public string StringTimes(string str, int n) {
+    string result = "";
+    for(int i = 0; i < n; i++){
+      result += s;
+    }
+    return result;
 
 }

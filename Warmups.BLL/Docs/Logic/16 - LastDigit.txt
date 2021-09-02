@@ -4,7 +4,30 @@ LastDigit(23, 19, 13) → true
 LastDigit(23, 19, 12) → false
 LastDigit(23, 19, 3) → true
 
-public boolean LastDigit(int a, int b, int c)
+class LastDigit
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(LastDigit(23,19,13)); //passing integer variable to the function
+            Console.WriteLine(LastDigit(23,19,12));
+            Console.WriteLine(LastDigit(23,19,3));
+        }
+
+public static boolean LastDigit(int a, int b, int c)
 {
+    if((a%10==b%10)||(a%10==c%10)) //check last digit of a with other two(b and c)
+            {
+                return true;
+            }
+            else if((b%10==a%10)||(b%10==c%10))  //check last digit of b with other two(a and c) 
+            {
+                return true;
+            }
+            return false;
+        }
 
 }
+
+
+
+        
