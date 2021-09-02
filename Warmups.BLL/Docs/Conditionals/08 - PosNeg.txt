@@ -4,6 +4,28 @@ PosNeg(1, -1, false) -> true
 PosNeg(-1, 1, false) -> true
 PosNeg(-4, -5, true) -> true
 
-public boolean PosNeg(int a, int b, boolean negative) {
+class PosNeg {
 
+public boolean PosNeg(int a, int b, boolean negative) {
+    if((a<0&&b>=0)||(a>=0&&b<0))
+       {
+           if(negative==false)
+           return true;
+           else
+           return false;
+       }
+       else if(a<0&&b<0)
+       {
+           if(negative==true)
+           return true;
+       }
+       return false;
+   }
+  static void Main(string[] args) {
+    HelloWorld w=new HelloWorld();
+    Console.WriteLine(w.PosNeg(1,-1,false));
+    Console.WriteLine(w.PosNeg(-1,1,false));
+    Console.WriteLine(w.PosNeg(-4,-5,true));
+  }
 }
+

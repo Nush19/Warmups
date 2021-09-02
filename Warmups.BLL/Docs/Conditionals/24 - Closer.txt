@@ -4,6 +4,59 @@ Closer(8, 13) -> 8
 Closer(13, 8) -> 8
 Closer(13, 7) -> 0
 
-public int Closer(int a, int b) {
+public class main
+{
+    //definition of Closer() function...
+public static int Closer(int a, int b) {
+    //find the subtraction from 10 of both numbers...
+        int a_10, b_10;
+        a_10 = a - 10;
+        b_10 = b - 10;
 
+        //if subtraction is less than 0 then change the sign of the a_10...
+        if(a_10 < 0)
+        {
+            a_10 = a_10*(-1);
+        }
+        
+        //if subtraction is less than 0 then change the sign of the b_10...
+        if(b_10 < 0)
+        {
+            b_10 = b_10*(-1);
+        }
+
+        //whichever is less, return that number...
+        if(a_10<b_10)
+        {
+            return a;
+        }
+        else if(b_10==a_10)
+        {
+            return 0;
+        }
+        else
+        {
+            return b;
+        }
+    }
+        
+        public static void Main()
+        {
+                //take two numbers from user...
+            System.Console.Write("Enter a number: ");
+                int x = Convert.ToInt32(System.Console.ReadLine());
+                
+                System.Console.Write("Enter a number: ");
+                int y = Convert.ToInt32(System.Console.ReadLine());
+        
+        //call the Closer() function and store into result...
+                int result = Closer(x,y);
+                
+                //print the result...
+        System.Console.Write("Closer to 10 is "+result);
+        }
 }
+
+
+   
+        

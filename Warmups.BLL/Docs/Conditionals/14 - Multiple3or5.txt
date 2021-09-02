@@ -4,6 +4,18 @@ Multiple3or5(3) -> true
 Multiple3or5(10) -> true
 Multiple3or5(8) -> false
 
+class Multiple3or5 {
 public boolean Multiple3or5(int number) {
-
+    static void Main() {
+int x;
+x=Convert.ToInt32(Console.ReadLine());
+if ((x%3 == 0)|| (x%5 == 0))
+Console.WriteLine(true);
+else
+Console.WriteLine(false);
 }
+}
+}
+
+
+  

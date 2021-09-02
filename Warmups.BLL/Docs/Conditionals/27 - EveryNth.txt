@@ -4,6 +4,20 @@ EveryNth("Miracle", 2) -> "Mrce"
 EveryNth("abcdefg", 2) -> "aceg"
 EveryNth("abcdefg", 3) -> "adg"
 
+class EveryNth{
 public string EveryNth(string str, int n) {
+    //create function by passing 2 string arguments and return type as string
+    string newstr=""; //declare empty string :newstr
+    for(int i=0;i<str.Length;i+=n){ //loop from 0 to length of strng and increment i by n
+    newstr=newstr+str.at(i); //append string at index i to newstr
+    }
+    return newstr; //return newstr
+    }
 
+    static void Main() {
+    EveryNth e=new EveryNth();
+    Console.WriteLine(e.EveryNth("abcdefg",3)); //call function
 }
+}
+
+

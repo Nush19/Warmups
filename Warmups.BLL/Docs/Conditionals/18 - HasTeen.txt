@@ -5,5 +5,5 @@ HasTeen(20, 19, 10) -> true
 HasTeen(20, 10, 12) -> false
 
 public boolean HasTeen(int a, int b, int c) {
-
+    return ((a > 12 & a < 20) || (b > 12 & b < 20) || (c > 12 & c < 20));
 }

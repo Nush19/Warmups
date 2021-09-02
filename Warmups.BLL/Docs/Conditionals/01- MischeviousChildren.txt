@@ -5,5 +5,11 @@ AreWeInTrouble(false, false) -> true
 AreWeInTrouble(true, false) -> false
 
 public boolean AreWeInTrouble(boolean aSmile, boolean bSmile) {
-  
+    if((aSmile == true & bSmile == true) || (aSmile == false & bSmile == false)){
+       return true;
+    }
+    else
+    {
+       return false;
+   }  
 }

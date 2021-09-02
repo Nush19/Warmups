@@ -4,6 +4,29 @@ EndUp("Hello") -> "HeLLO"
 EndUp("hi there") -> "hi thERE"
 EndUp("hi") -> "HI"
 
-public string EndUp(string str) {
-
+class EndUp {
+public string EndUp(string str) { 
+    //create function by passing string variable argument and return type as string
+    string newstr="",newstrlast3=""; //declare empty strings
+    int len=str.Length; //calculate length of string
+    if(len>=3) //if length is greater than equal to 3
+{
+    newstr=str.Substring(0,len-3);//intialize newstr= string from 0 to len-3 index
+    newstrlast3=str.Substring(len-3,3); //intialize newstrlast3= string from len-3 to len index
+    newstr=newstr+newstrlast3.ToUpper(); //convert string to uppercase string and add to newstr variable
 }
+    else { 
+        //if length is less than 3
+    newstr=str.ToUpper();//convert string to uppercase string and assign to newstr variable
+}
+    return newstr; //return newstr
+}
+    static void Main() {
+    EndUp e=new EndUp();
+    Console.WriteLine(e.EndUp("hi"));//call function
+}
+}
+
+
+
+

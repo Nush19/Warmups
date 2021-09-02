@@ -7,5 +7,11 @@ sleepIn(false, true) -> true
 
 
 public boolean CanSleepIn(boolean isWeekday, boolean isVacation) {
-  
+    if((isWeekday == false) || (isVacation == true)){
+       return true;
+    }
+    else
+    {
+       return false;
+    }
 }

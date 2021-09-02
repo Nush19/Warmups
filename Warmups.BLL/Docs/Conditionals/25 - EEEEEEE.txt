@@ -4,6 +4,26 @@ GotE("Hello") -> true
 GotE("Heelle") -> true
 GotE("Heelele") -> false
 
-public boolean GotE(string str) {
-
+class EEEEEEE {
+public boolean GotE(string str)//create function by passing string variable argument and return type as boolean
+{
+    int count=0; //declare count=0
+    for(int i=0;i<str.Length;i++){ //loop from 0 to string length
+    if((str[i]=='e') || (str[i]=='E')) //if string has 'e' or 'E' at any index
+{
+    count=count+1; //increment count by 1
 }
+}
+    if(count>=1 && count<=3){
+    return true; //if count is 1-3, return true
+}
+    return false; //if count is other than 1-3, return false
+}
+    static void Main() {
+    EEEEEEE e=new EEEEEEE();
+    Console.WriteLine(e.GotE("Heellele")); //call function
+}
+}
+
+
+

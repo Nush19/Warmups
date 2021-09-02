@@ -5,6 +5,20 @@ NearHundred(103) -> true
 NearHundred(90) -> true
 NearHundred(89) -> false
 
+class NearHundred {
+
 public boolean NearHundred(int n) {
 
+    if((n>=90 && n<=110) || (n>=190 && n<=210))
+    return true;
+    else
+    return false;
+    }
+
+  static void Main(string[] args) {
+    HelloWorld w=new HelloWorld();
+    Console.WriteLine(w.NearHundred(103));
+    Console.WriteLine(w.NearHundred(90));
+    Console.WriteLine(w.NearHundred(83));
+  }
 }

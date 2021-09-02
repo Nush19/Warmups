@@ -6,6 +6,22 @@ NotString("candy") -> "not candy"
 NotString("x") -> "not x"
 NotString("not bad") -> "not bad"
 
-public string NotString(string s) {
+class NotString {
 
+public string NotString(string s) {
+    if(s[0]=='n'&&s[1]=='o'&&s[2]=='t')
+      return s;
+      else
+      return "not "+s;
+  }
+  static void Main(string[] args) {
+    HelloWorld w=new HelloWorld();
+    Console.WriteLine(w.NotString("candy"));
+    Console.WriteLine(w.NotString("x"));
+    Console.WriteLine(w.NotString("not bad"));
+  }
 }
+
+
+  
+      

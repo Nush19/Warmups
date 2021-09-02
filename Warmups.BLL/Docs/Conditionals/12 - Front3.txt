@@ -4,6 +4,27 @@ Front3("Microsoft") -> "MicMicMic"
 Front3("Chocolate") -> "ChoChoCho"
 Front3("at") -> "atatat"
 
-public string Front3(string str) {
-
+class Front3
+{
+static void Main(string[] args)
+{
+Console.WriteLine(Front3("Microsoft"));
+Console.WriteLine(Front3("Chocolate"));
+Console.WriteLine(Front3("at"));
+Console.ReadLine();
 }
+public string Front3(string str) {
+    if (str.Length < 3)
+{
+return str + str + str;
+}
+else
+{
+string front = str.Substring(0, 3);
+return front + front + front;
+}
+}
+}
+
+
+

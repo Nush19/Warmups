@@ -4,6 +4,20 @@ FrontBack("code") -> "eodc"
 FrontBack("a") -> "a"
 FrontBack("ab") -> "ba"
 
-public string FrontBack(string str) {
-
+class FrontBack
+{
+static void Main(string[] args)
+{
+Console.WriteLine(FrontBack("code"));
+Console.WriteLine(FrontBack("a"));
+Console.WriteLine(FrontBack("ab"));
+Console.ReadLine();
 }
+
+public string FrontBack(string str) {
+    return str.Length > 1
+? str.Substring(str.Length - 1) + str.Substring(1, str.Length - 2) + str.Substring(0, 1) : str;
+}
+}
+
+

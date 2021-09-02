@@ -4,6 +4,45 @@ StartOz("ozymandias") -> "oz"
 StartOz("bzoo") -> "z"
 StartOz("oxx") -> "o"
 
-public string StartOz(string str) {
+public class main
+{
+    //definition of the StartOz() method...
+public static string StartOz(string str) {
+    //declare an empty string...
+        string ans = "";
+                //check first character is 'o' or not...
+        if(String.Equals(str[0], 'o'))
+        {
+                        //append the 'o' in ans...
+            ans = ans + "o";
+        }
+                
+                //check second character is 'z' or not...
+        if(String.Equals(str[1], 'z'))
+        {
+                        //append the 'z' in ans...
+            ans = ans + "z";
+        }
+        //return ans...
+        return ans;
+    }
+        
+        public static void Main()
+        {
+                //take string from user...
+            System.Console.Write("Enter a String: ");
+                string str = Console.ReadLine();
+        
+                //call the StartOz() method and store the result...
+                string result = StartOz(str);
+                
+                //print the result...
+        System.Console.Write("Result: "+result);
+        }
+}
 
 }
+
+
+    
+                
