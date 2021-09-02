@@ -6,6 +6,32 @@ InsertWord("<<>>", "Yay") -> "<<Yay>>"
 InsertWord("<<>>", "WooHoo") -> "<<WooHoo>>"
 InsertWord("[[]]", "word") -> "[[word]]"
 
-public string InsertWord(string container, string word) {
-
+class InsertWord {
+    
+    public static string InsertWord(string container,string word) {
+    //convert into stringArray 
+     char[] c = word.ToCharArray();  
+     char[] k = container.ToCharArray();
+     
+   string res="";
+   for(int i=0;i<2;i++){
+       res=res+k[i];
+   }
+  
+   for(int i=0;i<word.Length;i++){
+       res=res+c[i];
+   }
+   
+   for(int i=2;i<container.Length;i++){
+       res=res+k[i];
+   }
+    //convert into string
+   
+    return res.Trim(); 
+  }    
+  static void Main() {
+    Console.WriteLine(InsertWord("<<>>", "Yay"));
+    Console.WriteLine(InsertWord("<<>>", "WooHoo"));
+    Console.WriteLine(InsertWord("[[]]", "word"));
+  }
 }
