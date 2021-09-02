@@ -1,9 +1,17 @@
-Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's. 
-
-KeepLast({4, 5, 6}) -> {0, 0, 0, 0, 0, 6}
-KeepLast({1, 2}) -> {0, 0, 0, 2}
-KeepLast({3}) -> {0, 3}
-
 public int[] KeepLast(int[] numbers) {
+    int length = numbers.Length;
+       int[] newArr = new int[2*length];
+       newArr[2*length-1] = numbers[length-1];
+       for(int i=0; i<2*length-1; i++){
+           newArr[i] = 0;
+       }
+   return newArr;
+}
 
+static void Main(string[] args) {
+       int[] numbers = { 1,2,3,4,5,6,7 };
+Console.WriteLine(KeepLast(numbers) );
+       int[] arr = KeepLast(numbers);
+       foreach(int i in arr)
+           Console.Write(i+" ");
 }

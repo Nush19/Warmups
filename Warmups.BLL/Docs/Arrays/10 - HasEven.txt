@@ -1,9 +1,14 @@
-Given an int array , return true if it contains an even number (HINT: Use Mod (%)). 
-
-HasEven({2, 5}) -> true
-HasEven({4, 3}) -> true
-HasEven({7, 5}) -> false
-
 public boolean HasEven(int[] numbers) {
-
+    foreach(int num in numbers){
+        if(num%2 == 0)
+        return true;
+    }
+    return false;
 }
+
+static void Main(string[] args) {
+       int[] numbers = { 1,2,3,4,5,6,7 };
+Console.WriteLine(HasEven(numbers) );
+}
+
+

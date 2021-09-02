@@ -1,9 +1,33 @@
-Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array. 
-
-Fix23({1, 2, 3}) ->{1, 2, 0}
-Fix23({2, 3, 5}) -> {2, 0, 5}
-Fix23({1, 2, 1}) -> {1, 2, 1}
+class Fix23{
 
 public int[] Fix23(int[] numbers) {
+    public static int[] Fix23(int[] numbers) {
+        for(int i=1;i<numbers.Length;i++){
+            if(numbers[i] == 3 && numbers[i-1] == 2){
+                numbers[i] = 0;
+            }
+        }
+        return numbers;
+    }
+    static void Main() {
+        int [] arr1 = {1, 2, 3};
+        arr1 = Fix23(arr1);
+        for(int i=0;i<arr1.Length;i++){
+            Console.Write(arr1[i] + " ");
+        }
+        Console.WriteLine();
+        int [] arr2 = {2, 3, 5};
+        arr2 = Fix23(arr2);
+        for(int i=0;i<arr2.Length;i++){
+            Console.Write(arr2[i] + " ");
+        }
+        Console.WriteLine();
+        int [] arr3 = {1, 2, 1};
+        arr3 = Fix23(arr3);
+        for(int i=0;i<arr3.Length;i++){
+            Console.Write(arr3[i] + " ");
+        }
+    }
+
 
 }

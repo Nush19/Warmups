@@ -1,9 +1,21 @@
-Given an int array, return true if the array contains 2 twice, or 3 twice. 
+class Double23{
 
-Double23({2, 2, 3}) -> true
-Double23({3, 4, 5, 3}) -> true
-Double23({2, 3, 2, 2}) -> false
+public static boolean Double23(int[] numbers) {
+        int countTwo = 0, countThree = 0;
+        for(int i=0;i<numbers.Length; i++){
+            if(numbers[i] == 2) countTwo++;
+            else if(numbers[i] == 3) countThree++;
+        }
+        return (countTwo == 2 || countThree == 2);
+    }
 
-public boolean Double23(int[] numbers) {
-
-}
+    static void Main() {
+        int[] arr1 = {2, 2, 3};
+        int[] arr2 = {3, 4, 5, 3};
+        int[] arr3 = {2, 3, 2, 2};
+      
+        Console.WriteLine(Double23(arr1));
+        Console.WriteLine(Double23(arr2));
+        Console.WriteLine(Double23(arr3));
+  }
+}  

@@ -1,10 +1,18 @@
-Given an array of ints, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}. 
+class RotateLeft{
+    static void Main()
+    {
+        int[] numbers = {1,2,3};
+        RotateLeft rl = new RotateLeft();
+        numbers = t.RotateLeft(numbers);
+        Console.WriteLine("\nThe array after shifting left: ");
+        //printing an array
+        for (int i = 0; i < numbers.Length - 1; i++)
+            Write(numbers[i]+" ");
+    }
+}
 
-RotateLeft({1, 2, 3}) -> {2, 3, 1}
-RotateLeft({5, 11, 9}) -> {11, 9, 5}
-RotateLeft({7, 0, 0}) -> {0, 0, 7}
-
-public int[] RotateLeft(int[] numbers) {
+public class RotateLeft{
+    public int[] RotateLeft(int[] numbers) {
     int num = numbers[0]; //first element in num
     //for loop that shift element by 1 in left
     for(int i = 0; i < numbers.Length - 1; i++);
@@ -12,4 +20,8 @@ public int[] RotateLeft(int[] numbers) {
     //first number is shifted to last
     numbers[numbers.Length - 1] = num;
     return numbers;    
+  } 
 }
+
+
+   
