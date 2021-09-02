@@ -4,6 +4,22 @@ NoTriples({1, 1, 2, 2, 1}) -> true
 NoTriples({1, 1, 2, 2, 2, 1}) -> false
 NoTriples({1, 1, 1, 2, 2, 2, 1}) -> false
 
-public boolean NoTriples(int[] numbers) {
-
+class NoTriples {
+    public static boolean NoTriples(int[] numbers) {
+   
+        for(int i=0; i<numbers.Length-2; i++){
+            if(numbers[i] == numbers[i+1] && numbers[i+1] == numbers[i+2]){
+                return false;
+            }
+        }
+        return true;
+    }
+    static void Main() {
+        int [] arr1 = {1, 1, 2, 2, 1};
+        int [] arr2 = {1, 1, 2, 2, 2, 1};
+        int [] arr3 = {1, 1, 1, 2, 2, 2, 1};
+        Console.WriteLine(NoTriples(arr1));
+        Console.WriteLine(NoTriples(arr2));
+        Console.WriteLine(NoTriples(arr3));
+    }
 }

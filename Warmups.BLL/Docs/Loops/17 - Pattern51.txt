@@ -4,6 +4,22 @@ Pattern51({1, 2, 7, 1}) -> true
 Pattern51({1, 2, 8, 1}) -> false
 Pattern51({2, 7, 1}) -> true
 
-public boolean Pattern51(int[] numbers) {
-
+class Pattern51 {
+    public static bool Pattern51(int[] numbers) {
+   
+        for(int i=0; i<numbers.Length-2; i++){
+            if(numbers[i] == (numbers[i+1] - 5) && numbers[i] == (numbers[i+2] + 1)){
+                return true;
+            }
+        }
+        return false;
+    }
+    static void Main() {
+        int [] arr1 = {1, 2, 7, 1};
+        int [] arr2 = {1, 2, 8, 1};
+        int [] arr3 = {2, 7, 1};
+        Console.WriteLine(Pattern51(arr1));
+        Console.WriteLine(Pattern51(arr2));
+        Console.WriteLine(Pattern51(arr3));
+    }
 }

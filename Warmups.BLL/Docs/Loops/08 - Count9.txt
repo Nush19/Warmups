@@ -4,6 +4,25 @@ Count9({1, 2, 9}) -> 1
 Count9({1, 9, 9}) -> 2
 Count9({1, 9, 9, 3, 9}) -> 3
 
-public int Count9 (int[] numbers) {
-
+public class Count9
+{
+    public int Count9 (int[] numbers) {
+      int n = numbers.Length;
+                int res = 0;
+                //iteratre over all the elements of the array
+                //and count the numbers of 9s
+                for(int i = 0; i < n; i++)
+                {
+                        if(numbers[i] == 9) res++;
+                }
+                return res;
 }
+
+public static void Main()
+    {
+        Console.WriteLine(Count9(new int[] {1, 2, 9}));
+                Console.WriteLine(Count9(new int[] {1, 9, 9}));
+                Console.WriteLine(Count9(new int[] {1, 9, 9, 3, 9}));
+                Console.Write("\n");
+    } 
+}             

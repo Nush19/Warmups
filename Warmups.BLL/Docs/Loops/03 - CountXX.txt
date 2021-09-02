@@ -4,6 +4,22 @@ CountXX("abcxx") -> 1
 CountXX("xxx") -> 2
 CountXX("xxxx") -> 3
 
+public class main {  
+  public static void Main(string[] args){
+    //function calls
+    Console.WriteLine("\nCalling COuntXX()");
+    Console.WriteLine(CountXX("abcxx"));
+    Console.WriteLine(CountXX("xxx"));
+    Console.WriteLine(CountXX("xxxx"));
+  }
+  
 public int CountXX(string str) {
+    int count = 0;
+    for(int i = 0; i < s.Length-1;i++){
+    if(s[i] == 'x' && s[i+1] == 'x')
+        count += 1;
+    }
+    return count;
+  }
 
 }

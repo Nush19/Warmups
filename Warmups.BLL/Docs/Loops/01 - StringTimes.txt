@@ -11,7 +11,7 @@ public class main {
     Console.WriteLine(StringTimes("Hi", 2));
     Console.WriteLine(StringTimes("Hi", 3));
     Console.WriteLine(StringTimes("Hi", 1));
-
+  } 
 public string StringTimes(string str, int n) {
     string result = "";
     for(int i = 0; i < n; i++){

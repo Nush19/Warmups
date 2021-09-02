@@ -4,6 +4,29 @@ CountLast2("hixxhi") -> 1
 CountLast2("xaxxaxaxx") -> 1
 CountLast2("axxxaaxx") -> 2
 
-public int CountLast2(string str) {
+public class CountLast2
+{
+        
+        public static int countLast2(string str)
+        {
+                int n = str.Length;
+                int res = 0;
+                for(int i = 1; i < n - 2; i++)
+                {
+                        //we check all the pairs of adjacent characters with 
+                        //the last 2 and if they match we increase the res
+                        if(str[i] == str[n-1] && str[i-1] == str[n-2])
+                                res++;
+                }
+                return res;
+        }
 
+public static void Main()
+    {
+                //Running the samples given in the question
+        Console.WriteLine(countLast2("hixxhi"));
+        Console.WriteLine(countLast2("xaxxaxaxx"));
+                Console.WriteLine(countLast2("axxxaaxx"));
+                Console.Write("\n");
+    }            
 }

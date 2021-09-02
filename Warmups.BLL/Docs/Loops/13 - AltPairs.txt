@@ -4,6 +4,25 @@ AltPairs("kitten") -> "kien"
 AltPairs("Chocolate") -> "Chole"
 AltPairs("CodingHorror") -> "Congrr"
 
+class AltPairs
+{
 public string AltPairs(string str) {
+    string altPairsStr="";
+    for(int i=0;i<str.Length;i+=4)
+{
+   altPairsStr+=str[i];
+   if(i+1<str.Length)
+   altPairsStr+=str[i+1];
+}
+    return altPairsStr; 
+}
 
+static void Main(string[] args)
+{
+      AltPairs a=new AltPairs();
+      Console.WriteLine("kitten->"+a.AltPairs("kitten"));
+      Console.WriteLine("Chocolate->"+a.AltPairs("Chocolate"));
+      Console.WriteLine("CodingHorror->"+a.AltPairs("CodingHorror"));
+
+    }
 }

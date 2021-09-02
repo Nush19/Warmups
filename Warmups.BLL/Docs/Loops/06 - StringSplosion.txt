@@ -4,6 +4,27 @@ StringSplosion("Code") -> "CCoCodCode"
 StringSplosion("abc") -> "aababc"
 StringSplosion("ab") -> "aab"
 
-public string StringSplosion(string str) {
-
+class StringSplosion
+{
+    public static string StringSplosion(string str)
+    {
+        string s1="";
+        // itereate all characters on string
+        for (int i = 0; i <= str.Length - 1; i++)
+        {
+            // string index condition
+            if(i!=str.Length)
+            {
+                // append substring from 0 to i+1 index into string into s1
+                s1=s1+str.Substring(0,i+1);
+            }
+        }
+        // return s1
+        return s1;
+    }
+    static void Main() {
+         Console.WriteLine(StringSplosion("Code"));
+         Console.WriteLine(StringSplosion("abc"));
+         Console.WriteLine(StringSplosion("ab"));
+    }
 }

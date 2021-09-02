@@ -4,6 +4,27 @@ ArrayFront9({1, 2, 9, 3, 4}) -> true
 ArrayFront9({1, 2, 3, 4, 9}) -> false
 ArrayFront9({1, 2, 3, 4, 5}) -> false
 
-public boolean ArrayFront9(int[] numbers) {
-
+public class ArrayFront9
+{
+    public static boolean ArrayFront9(int[] numbers) {
+                
+                int n = numbers.Length;
+                //we will check only the first 4 or all the elements of the array
+                //whichever is minimum
+                for(int i = 0; i < Math.Min(n, 4); i++)
+                {
+                        //if 9 is among them, we return true
+                        if(numbers[i] == 9)
+                                return true;
+                }
+                //else we return false
+                return false;
+        }
+    
+     public static void Main()
+    {
+        Console.WriteLine(ArrayFront9(new int[] {1, 2, 9, 3, 4}));
+        Console.WriteLine(ArrayFront9(new int[] {1, 2, 3, 4, 9}));
+        Console.WriteLine(ArrayFront9(new int[] {1, 2, 3, 4, 5}));
+    }
 }

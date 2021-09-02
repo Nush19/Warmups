@@ -4,6 +4,32 @@ DoNotYak("yakpak") -> "pak"
 DoNotYak("pakyak") -> "pak"
 DoNotYak("yak123ya") -> "123ya"
 
-public string DoNotYak(string str) {
+class DoNotYak
+{
+  public string DoNotYak(string str) {
+    string DoNotYakStr="";
+    for(int i=0;i<str.Length;i++)
+{
+    if(i<str.Length-3)
+{
+    if(!String.Equals("yak",str.Substring(i,3)))
+       DoNotYakStr+=str[i];
+    else
+    i+=2;
+}
+    else
+    DoNotYakStr+=str[i];
+}
+    return DoNotYakStr;
 
 }
+
+static void Main(string[] args)
+{
+    DoNotYak d=new DoNotYak();
+    Console.WriteLine("yakpak->"+d.DoNotYak("yakpak"));
+    Console.WriteLine("pakyak->"+d.DoNotYak("pakyak"));
+    Console.WriteLine("yak123ya->"+d.DoNotYak("yak123ya"));
+}
+}
+

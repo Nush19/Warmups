@@ -4,6 +4,27 @@ Array667({6, 6, 2}) -> 1
 Array667({6, 6, 2, 6}) -> 1
 Array667({6, 7, 2, 6}) -> 1
 
-public int Array667(int[] numbers) {
+class Array667
+{
 
+public int Array667(int[] numbers) {
+    int count=0;
+   for(int i=0;i<numbers.Length-1;i++)
+{
+   if(numbers[i]==6&&(numbers[i+1]==6||numbers[i+1]==7))
+   count++;
+}
+       return count;
+}
+
+static void Main(string[] args)
+{
+    Array667 a=new Array667();
+    int [] array1 = new int[] {6, 6, 2};
+    int [] array2 = new int[] {6, 6, 2, 6};
+    int [] array3 = new int[] {6, 7, 2, 6};
+    Console.WriteLine("{6, 6, 2}->"+p.Array667(array1));
+    Console.WriteLine("{6, 6, 2, 6}->"+p.Array667(array2));
+    Console.WriteLine("{6, 7, 2, 6}->"+p.Array667(array3));
+}
 }

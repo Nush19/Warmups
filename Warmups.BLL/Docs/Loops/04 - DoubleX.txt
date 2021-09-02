@@ -4,6 +4,39 @@ DoubleX("axxbb") -> true
 DoubleX("axaxxax") -> false
 DoubleX("xxxxx") -> true
 
-public boolean DoubleX(string str) {
-
+class DoubleX
+{
+    public static boolean DoubleX(string str)
+    {
+        // iterate into each character into string
+        for (int i = 0; i <= str.Length - 1; i++)
+        {
+            // if character x found in list
+            if(str[i]=='x')
+            {
+                // if it is last element
+                if(i==str.Length)
+                {
+                    return false;
+                }
+                // if string is equal to next character of string
+                if(str[i]==str[i+1])
+                {
+                    return true;
+                }
+                // else return false
+                else
+                {
+                     return false;
+                }
+            }
+        }
+        // if x is not found in string
+        return false;
+    }
+    static void Main() {
+         Console.WriteLine(DoubleX("axxbb"));
+         Console.WriteLine(DoubleX("axaxxax"));
+         Console.WriteLine(DoubleX("xxxxx"));
+    }
 }

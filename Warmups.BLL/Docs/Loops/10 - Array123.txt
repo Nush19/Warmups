@@ -4,6 +4,23 @@ Array123({1, 1, 2, 3, 1}) -> true
 Array123({1, 1, 2, 4, 1}) -> false
 Array123({1, 1, 2, 1, 2, 3}) -> true
 
-public boolean Array123(int[] numbers) {
+public class Array123
+{
+    public boolean Array123(int[] numbers) {
+      int i;
+        for(i=0;i<num.Length - 2;i++){
+          if(num[i]==1 && num[i+1] ==2 && num[i+2] == 3){
+              Console.WriteLine("True");
+              return true;
+          }
+      }
+      return false;
+}
 
+public static void Main()
+    {
+        Console.WriteLine(Array123(new int[] {1, 1, 2, 3, 1}));
+        Console.WriteLine(Array123(new int[] {1, 1, 2, 4, 1}));
+        Console.WriteLine(Array123(new int[] {1, 1, 2, 4, 1}));
+    }
 }
