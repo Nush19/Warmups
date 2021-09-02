@@ -4,6 +4,28 @@ StringX("xxHxix") -> "xHix"
 StringX("abxxxcd") -> "abcd"
 StringX("xabxxxcdx") -> "xabcdx"
 
-public string StringX(string str) {
-
+class StringX {
+    
+    public static string StringX(string str) {
+    //convert into stringArray 
+     char[] c = str.ToCharArray();  
+     for(int i=1;i<str.Length-1;i++){
+       if(c[i]=='x')
+         c[i]=' ';
+     }
+   string res="";
+   for(int i=0;i<str.Length;i++){
+       if(c[i]!=' ')
+       res=res+c[i];
+   }
+  
+    //convert into string
+   
+    return res.Trim(); 
+  }    
+  static void Main() {
+    Console.WriteLine(StringX("xxHxix"));
+    Console.WriteLine(StringX("abxxxcd"));
+    Console.WriteLine(StringX("xabxxxcdx"));
+  }
 }
