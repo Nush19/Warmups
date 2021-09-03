@@ -31,7 +31,16 @@ namespace Warmups.BLL
         
         public int CanHazTable(int yourStyle, int dateStyle)
         {
-            throw new NotImplementedException();
+            if(yourStyle >= 8 || dateStyle >= 8){
+            return 2;
+            }
+            else if(yourStyle <= 2 || dateStyle <= 2){
+            return 0;
+            }
+            else
+            {
+            return 1;
+        }
         }
 
         public bool PlayOutside(int temp, bool isSummer)
@@ -295,7 +304,15 @@ namespace Warmups.BLL
         
         public int RollDice(int die1, int die2, bool noDoubles)
         {
-            throw new NotImplementedException();
+            if(noDoubles){
+            if(die1 == die2){
+                return die1+die2+1;
+            }else{
+                return die1+die2;
+            }
+            }else{
+            return die1+die2;
+        }
         }
 
     }

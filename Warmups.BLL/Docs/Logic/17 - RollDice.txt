@@ -4,6 +4,27 @@ RollDice(2, 3, true) → 5
 RollDice(3, 3, true) → 7
 RollDice(3, 3, false) → 6
 
-public int RollDice(int die1, int die2, boolean noDoubles) {
-
+class RollDice {
+  
+    // method to return sum of die1 and die2 values
+    public int RollDice(int die1, int die2, Boolean noDoubles){
+        if(noDoubles){
+            if(die1 == die2){
+                return die1+die2+1;
+            }else{
+                return die1+die2;
+            }
+        }else{
+            return die1+die2;
+        }
+    }
+  
+    static void Main() {
+        // creating object for the class
+        Dice dice = new Dice();
+        // calling function with different parameters
+        Console.WriteLine(dice.RollDice(2,3,true));
+        Console.WriteLine(dice.RollDice(3,3,true));
+        Console.WriteLine(dice.RollDice(3,3,false));
+    }
 }

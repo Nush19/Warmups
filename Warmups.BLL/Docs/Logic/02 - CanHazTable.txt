@@ -4,6 +4,25 @@ CanHazTable(5, 10) → 2
 CanHazTable(5, 2) → 0
 CanHazTable(5, 5) → 1
 
-public int CanHazTable(int yourStyle, int dateStyle) {
+class CanHazTable {
   
+    // method to return stylishness of couple
+    public int CanHazTable(int yourStyle, int dateStyle){
+        if(yourStyle >= 8 || dateStyle >= 8){
+            return 2;
+        }else if(yourStyle <= 2 || dateStyle <= 2){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
+  
+    static void Main() {
+        // creating object for the class
+        StyleDate style = new StyleDate();
+        // calling function with different parameters
+        Console.WriteLine(style.CanHazTable(5,10));
+        Console.WriteLine(style.CanHazTable(5,2));
+        Console.WriteLine(style.CanHazTable(5,5));
+    }
 }
